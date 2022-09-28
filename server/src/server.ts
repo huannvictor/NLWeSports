@@ -5,6 +5,7 @@ import { PrismaClient } from "@prisma/client";
 import { convertHourStringToMinutes } from "./utils/convert-hour-string-to-minutes";
 import { convertMinutesToHourString } from "./utils/convert-minutes-to-hour-string";
 
+const PORT = 'https://nlw-e-sports-web-ipjv.vercel.app/'
 const app = express();
 
 app.use(express.json());
@@ -107,7 +108,7 @@ app.get('/ads/:id/discord', async (request, response) => {
 	});
 })
 
-app.listen(2424);
+app.listen(PORT);
 
 /** //* HTTP status code
  * 
