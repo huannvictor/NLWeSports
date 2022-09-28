@@ -8,13 +8,13 @@ import { convertMinutesToHourString } from "./utils/convert-minutes-to-hour-stri
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 
 //! cors => em produção o ideal é que o domínio seja setado, conforme abaixo:
-/** app.use(cors({
-	origin: 'http://dominio.com.br'
+app.use(cors({
+	origin: 'https://nlw-e-sports-web-ipjv.vercel.app/'
 })) 
-*/
+
 
 const prisma = new PrismaClient({
 	log: ['query']
